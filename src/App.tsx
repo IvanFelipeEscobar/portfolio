@@ -1,11 +1,8 @@
-
 function App() {
-
   return (
-    <div  className="text-3xl font-bold underline">
-   Ivan Felipe Escobar
-    </div>
-  )
+      <div className=""></div>
+    
+  );
 }
 
-export default App
+export default App;
