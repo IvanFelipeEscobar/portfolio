@@ -1,14 +1,15 @@
+import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 
 function App() {
   return (
-    <>
+    <div  className="bg-blue-600 h-screen">
     
-    <header className="bg-blue-600 h-screen">
+    <header>
       <div className="text-right p-5 text-3xl border-b shadow-md shadow-black">
         <section
           id="my-name"
-          className="border p-3 inline-block rounded-md shadow-md shadow-black font-Honk"
+          className="border p-3 inline-block rounded-md shadow-md shadow-black font-Honk bg-blue-900 hover:bg-white"
         >
           Ivan Felipe Escobar
         </section>
@@ -17,14 +18,14 @@ function App() {
         <Nav />
       </nav>
     </header>
-    <body>
+    <body id="">
 
     </body>
-    <footer>
-      
+    <footer id="footer" className="p-3 absolute bottom-0 border-t w-full shadow-reverse shadow-black">
+<Footer/>
     </footer>
 
-    </>
+    </div>
   );
 }
 
