@@ -1,7 +1,11 @@
 
 const Nav = () => {
   return (
-    <div>Nav</div>
+    <ul id="navigation" className="">
+        <li>About me</li>
+        <li>Projects</li>
+        <li>Contact me</li>
+    </ul>
   )
 }
 
