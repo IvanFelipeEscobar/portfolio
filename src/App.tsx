@@ -1,7 +1,20 @@
+import { useState } from "react";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
 
 function App() {
+
+  const [pg, setPg]= useState('landing')
+  const renderPage = () => {
+    if (pg === 'About') return <About/>
+    if (pg === 'Contact') return <Contact/>
+    if (pg === 'Projects') return <Projects/>
+    return <></>
+  }
+  const handlePg = (page: string) => setPg(page)
   return (
     <div  className="bg-blue-600 h-screen">
     
@@ -15,11 +28,11 @@ function App() {
         </section>
       </div>
       <nav id="navigation" className="p-5">
-        <Nav />
+        <Nav activePg={pg} handlePg={handlePg}/>
       </nav>
     </header>
-    <body id="main_content" className="border mx-5 h-96 shadow-black rounded-md shadow-md bg-stone-800">
-
+    <body id="main_content" className="border mx-5 my-10 h-96 shadow-black rounded-md shadow-xl bg-stone-800 -z-0">
+{renderPage()}
     </body>
     <footer id="footer" className="p-3 absolute bottom-0 border-t w-full shadow-reverse shadow-black">
 <Footer/>
