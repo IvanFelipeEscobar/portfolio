@@ -6,19 +6,24 @@ interface TypingAnimationProps {
 }
 
 const TypingAnimation: React.FC<TypingAnimationProps> = ({
-  typingSpeed = 200,
-  cursorSpeed = 500,
+  typingSpeed = 100,
+  cursorSpeed = 600,
 }) => {
   const phrases: string[] = useMemo(
-    () => [
-      `Hey! I'm Ivan`,
-      `I'm a developer`,
-      `I'm a tinkerer`,
-      `I love to play guitar!`,
-      'I build solutions',
-      'I want to make an impact',
-      `I love coding`
-    ],
+    () =>[
+        "Passionate about crafting clean and efficient code.",
+        "Dedicated to delivering innovative solutions.",
+        "Driven by a love for problem-solving.",
+        "Adaptable and always eager to learn.",
+        "Enthusiastic about creating seamless user experiences.",
+        "Detail-oriented with a focus on quality.",
+        "Collaborative team player with excellent communication skills.",
+        "Committed to staying up-to-date with the latest technologies.",
+        "Excited to contribute to impactful projects.",
+        "Infusing creativity into every line of code.",
+        "Embracing challenges with a positive mindset.",
+        "Continuously evolving and evolving with the tech landscape."
+      ],
     []
   );
 

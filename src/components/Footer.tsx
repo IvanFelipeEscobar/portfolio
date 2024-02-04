@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <div className="text-center">
-        Made by Ivan Felipe Escobar
+        Made with &hearts; by Ivan Felipe Escobar
     </div>
   )
 }
