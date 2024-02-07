@@ -3,7 +3,7 @@ interface OldTubeTVProps {
 }
 const OldTubeTV: React.FC<OldTubeTVProps> = ({ render }) => {
   return (
-    <div className="relative w-full max-w-[40rem] h-96 bg-black border-4 border-gray-800 rounded-lg overflow-hidden mx-auto my-8">
+    <div className="relative w-full max-w-[40rem] h-96 bg-black border-4 border-gray-800 rounded-lg overflow-hidden box-border mx-auto my-8">
       {/* TV Screen */}
       <div className="absolute inset-4 bg-gray-800 border-2 border-black overflow-auto">
         {render()}

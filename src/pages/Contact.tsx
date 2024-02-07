@@ -1,8 +1,10 @@
-
+import ContactForm from "../components/ContactForm";
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <div>
+      <ContactForm />
+    </div>
+  );
+};
 
-export default Contact
+export default Contact;
