@@ -19,19 +19,22 @@ function App() {
   return (
     <div className="bg-blue-600 h-full ">
       <header>
-        <nav className="flex justify-between flex-wrap p-5 text-3xl border-b shadow-md shadow-black">
-          <section className="font-Honk">Ivan Felipe Escobar</section>
+        <nav className="flex justify-center sm:justify-between flex-wrap p-5 text-3xl border-b shadow-md shadow-black">
+          <section className="font-Honk mr-6 mb-2">Ivan Felipe Escobar</section>
           <div>
             <Nav activePg={pg} handlePg={handlePg} />
           </div>
         </nav>
       </header>
-      <div className="m-10 p-12">
+
+      <div className="">
         <OldTubeTV render={renderPage}/>
       </div>
+
       <div className="h-32 font-strike text-center text-2xl">
         <TypingAnimation />
       </div>
+
       <footer id="footer" className="p-3 bg-inherit w-full">
         <Footer />
       </footer>

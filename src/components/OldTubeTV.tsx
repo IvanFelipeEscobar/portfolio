@@ -1,17 +1,25 @@
 interface OldTubeTVProps {
   render: () => JSX.Element;
 }
-const OldTubeTV: React.FC<OldTubeTVProps> = ({render}) => {
+const OldTubeTV: React.FC<OldTubeTVProps> = ({ render }) => {
   return (
-    <div className="relative w-full max-w-[40rem] h-60 bg-black border-4 border-black rounded-lg overflow-hidden">
+    <div className="relative w-full max-w-[40rem] h-96 bg-black border-4 border-gray-800 rounded-lg overflow-hidden mx-auto my-8">
       {/* TV Screen */}
-      <div className="absolute inset-4 bg-gray-800 border-2 border-black">{render()}</div>
+      <div className="absolute inset-4 bg-gray-800 border-2 border-black overflow-auto">
+        {render()}
+      </div>
 
       {/* Knobs */}
       <div className="absolute -bottom-3 z-10 left-1/2 flex gap-6">
-        <div className="w-6 h-6 bg-black border-2 border-gray-800 rounded-full mb-4"><section className="absolute -top-4 -left-3 text-xs">volume</section></div>
-        <div className="w-6 h-6 bg-black border-2 border-gray-800 rounded-full"><section className="absolute -top-4 left-10 text-xs">channel</section></div>
-        <div className="w-6 h-6 bg-black border-2 border-gray-800 rounded-full"><section className="absolute -top-4 left-24 text-xs">power</section></div>
+        <div className="w-6 h-6 bg-black border-2 border-gray-800 rounded-full mb-4">
+          <section className="absolute -top-4 -left-3 text-xs">volume</section>
+        </div>
+        <div className="w-6 h-6 bg-black border-2 border-gray-800 rounded-full">
+          <section className="absolute -top-4 left-10 text-xs">channel</section>
+        </div>
+        <div className="w-6 h-6 bg-black border-2 border-gray-800 rounded-full">
+          <section className="absolute -top-4 left-24 text-xs">power</section>
+        </div>
       </div>
 
       {/* Base */}
