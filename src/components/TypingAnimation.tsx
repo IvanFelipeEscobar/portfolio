@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 
 interface TypingAnimationProps {
   typingSpeed?: number;
@@ -17,12 +17,11 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
         "Adaptable and always eager to learn.",
         "Enthusiastic about creating seamless user experiences.",
         "Detail-oriented with a focus on quality.",
-        "Collaborative team player with excellent communication skills.",
         "Committed to staying up-to-date with the latest technologies.",
         "Excited to contribute to impactful projects.",
         "Infusing creativity into every line of code.",
         "Embracing challenges with a positive mindset.",
-        "Continuously evolving and evolving with the tech landscape."
+        "Continuously evolving with the tech landscape."
       ],
     []
   );
