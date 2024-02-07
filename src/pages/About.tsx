@@ -1,11 +1,7 @@
-import TypingAnimation from "../components/TypingAnimation";
-
 const About = () => {
   return (
     <div className="text-stone-600 m-4 rounded-sm md:p-3 bg-blue-300 overflow-auto max-w-lg">
-      <div className="h-32 font-strike text-2xl">
-        <TypingAnimation />
-      </div>
+     
       <div className="text-roboto">
         I am a seasoned mechanic with 15 years of hands-on experience,
         transitioning into the dynamic field of web development through a Flex

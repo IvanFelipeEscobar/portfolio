@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import OldTubeTV from "./components/OldTubeTV";
+import TypingAnimation from "./components/TypingAnimation";
 
 function App() {
   const [pg, setPg] = useState("landing");
@@ -26,14 +27,11 @@ function App() {
         </nav>
       </header>
       <div className="m-10 p-12">
-        <OldTubeTV />
+        <OldTubeTV render={renderPage}/>
       </div>
-      <body
-        id="main_content"
-        className="max-w-xl border mx-5 my-10 h-3/5 shadow-black rounded-md shadow-xl bg-stone-800"
-      >
-        {renderPage()}
-      </body>
+      <div className="h-32 font-strike text-center text-2xl">
+        <TypingAnimation />
+      </div>
       <footer id="footer" className="p-3 bg-inherit w-full">
         <Footer />
       </footer>

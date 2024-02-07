@@ -1,10 +1,11 @@
-import React from "react";
-
-const OldTubeTV: React.FC = () => {
+interface OldTubeTVProps {
+  render: () => JSX.Element;
+}
+const OldTubeTV: React.FC<OldTubeTVProps> = ({render}) => {
   return (
-    <div className="relative w-96 h-60 bg-black border-4 border-gray-800 rounded-lg overflow-hidden">
+    <div className="relative w-full max-w-[40rem] h-60 bg-black border-4 border-black rounded-lg overflow-hidden">
       {/* TV Screen */}
-      <div className="absolute inset-4 bg-gray-800 border-2 border-black"></div>
+      <div className="absolute inset-4 bg-gray-800 border-2 border-black">{render()}</div>
 
       {/* Knobs */}
       <div className="absolute -bottom-3 z-10 left-1/2 flex gap-6">
@@ -15,7 +16,7 @@ const OldTubeTV: React.FC = () => {
 
       {/* Base */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-        <div className="w-[22rem] h-12 bg-gray-800 rounded-t-lg border-2 border-black"></div>
+        <div className="w-[38rem] h-12 bg-gray-800 rounded-t-lg border-4 border-black"></div>
       </div>
     </div>
   );
