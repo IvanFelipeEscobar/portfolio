@@ -4,12 +4,9 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    fontFamily: {
-      'Honk': ['Honk', 'system-ui'],
-      'strike': ['Protest Strike'],
-      'roboto': ['Roboto']
-    },
+    
   },
-  plugins: [],
+  // eslint-disable-next-line no-undef
+  plugins: [require('daisyui')]
 }
 
