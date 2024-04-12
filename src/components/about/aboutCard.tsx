@@ -1,4 +1,4 @@
-import AboutContent from "./aboutContent";
+import AboutModal from "./aboutModal";
 
 const AboutCard = () => {
   return (
@@ -14,24 +14,7 @@ const AboutCard = () => {
         rigorous Flex Full Stack Web Development Bootcamp at the Georgia
         Institute of Technology.
       </p>
-      <button
-        className="w-full btn btn-accent text-xl md:w-fit"
-        onClick={() => {
-          const modal = document.getElementById("about-modal")! as HTMLDialogElement
-          modal.showModal()}}
-      >
-        ...continue reading
-      </button>
-      <dialog id="about-modal" className="modal">
-        <div className="modal-box bg-success">
-          <AboutContent/>
-          <hr/>
-          <p className="py-4">Press ESC key or click outside to close</p>
-        </div>
-        <form method="dialog" className="modal-backdrop">
-          <button>close</button>
-        </form>
-      </dialog>
+      <AboutModal/>
     </>
   );
 };
