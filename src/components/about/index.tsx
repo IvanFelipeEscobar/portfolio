@@ -1,12 +1,11 @@
+import AboutContent from './aboutContent'
 import AboutParallax from './aboutParallax'
 
 const About = () => {
   return (
-    <div id="about" className='h-screen bg-primary'> 
+    <div id="about" className='h-full bg-primary'> 
     <AboutParallax/>
-    <div>
-       <div></div>
-    </div>
+   <AboutContent/>
     </div>
   )
 }
