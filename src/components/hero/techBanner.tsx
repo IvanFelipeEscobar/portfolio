@@ -9,7 +9,7 @@ const TechBanner = () => {
       <motion.div
       layout
         ref={constraintsRef}
-        className="h-16  flex flex-wrap flex-col justify-center items-center overflow-x-auto -mx-12 sm:-mx-16 gap-1 my-4"
+        className="h-16  w-full flex flex-wrap flex-col justify-center items-center overflow-x-auto gap-2 absolute left-10 -mx-12"
       >
         <motion.img
         layout

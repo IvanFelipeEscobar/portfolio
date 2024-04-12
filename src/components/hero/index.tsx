@@ -24,7 +24,7 @@ const Hero = () => {
             Building the Future, One Line at a Time
           </motion.h1>
 
-          <p className="sm:text-xl text-secondary opacity-75">
+          <p className="sm:text-xl text-secondary">
             Full-Stack Developer | Transforming Ideas into Powerful
             Applications.
           </p>
