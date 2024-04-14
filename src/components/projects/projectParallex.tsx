@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import ProjectCard from "./projectCard";
-
+import ProjectCarousel from "./projectCarousel";
 const ProjectParallex = () => {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -24,14 +23,14 @@ const ProjectParallex = () => {
     className="sticky z-0 overflow-hidden"
 >
 <motion.div
-        className="absolute bg-neutral-950/70"
+        className="absolute"
         style={{
           opacity,
         }}
       />
       
 </motion.div>
-<ProjectCard/>
+<ProjectCarousel/>
 </>
   )
 }

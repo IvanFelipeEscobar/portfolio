@@ -3,7 +3,7 @@ import AboutParallax from './aboutParallax'
 
 const About = () => {
   return (
-    <div id="about" className='h-full bg-info'> 
+    <div id="about" className='h-full bg-success'> 
     <AboutParallax/>
    <AboutContent/>
     </div>

@@ -85,7 +85,7 @@ const AboutModal = () => {
           </p>
 
           <hr />
-          <p className="py-4">Press ESC key or click outside to close</p>
+          <p className="py-4 mt-5" >Press ESC key or click outside to close</p>
         </div>
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
