@@ -23,7 +23,6 @@ const ProjectCard = ({
           style={{
             backgroundImage: `url(${imageSrc})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
           }}
         >
         </div>

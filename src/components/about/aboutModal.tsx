@@ -12,7 +12,7 @@ const AboutModal = () => {
           return modal.showModal();
         }}
       >
-        Continue reading<FaReadme />
+       <FaReadme /> Continue reading
       </button>
       <dialog id="about-modal" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box bg-success">

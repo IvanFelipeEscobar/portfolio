@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import ProjectCarousel from "./projectCarousel";
 const ProjectParallex = () => {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -10,7 +9,7 @@ const ProjectParallex = () => {
   
     const scale = useTransform(scrollYProgress, [0, 1], [1, 0.75]);
     const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  return (<>
+  return (
 <motion.div
     style={{
         backgroundImage: `url("/images/code.jpg")`,
@@ -30,8 +29,6 @@ const ProjectParallex = () => {
       />
       
 </motion.div>
-<ProjectCarousel/>
-</>
   )
 }
 

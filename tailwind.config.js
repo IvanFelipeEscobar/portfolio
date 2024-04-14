@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "piedmont": 'url("/images/piedmont-park.png")'
+        "piedmont": 'url("/images/piedmont-park.png")',
+        "contact": "url('/images/about.png')"
       }
     }
   },

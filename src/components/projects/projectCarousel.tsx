@@ -48,14 +48,14 @@ const projects = [
     github: `https://github.com/IvanFelipeEscobar/MemeLib`,
     badge: ["reddit API", "Foundation Framework", "HTML", "JavaScript"],
   },
-  // {
-  //   src: `/images/weather-dash.png`, //img path
-  //   title: `Weather Dashboard`, //project title
-  //   description: `Simple weather application styled using bootstrap. Weather information acquired via the open weather API`,
-  //   link: `https://ivanfelipeescobar.github.io/Weather-Dashboard/`, //deployed app link
-  //   github: `https://github.com/IvanFelipeEscobar/Weather-Dashboard`,
-  //   badge: ["Open Weather API", "Bootstrap", "HTML"],
-  // },
+  {
+    src: `/images/weather-dash.png`, //img path
+    title: `Weather Dashboard`, //project title
+    description: `Simple weather application styled using bootstrap. Weather information acquired via the open weather API`,
+    link: `https://ivanfelipeescobar.github.io/Weather-Dashboard/`, //deployed app link
+    github: `https://github.com/IvanFelipeEscobar/Weather-Dashboard`,
+    badge: ["Open Weather API", "Bootstrap", "HTML"],
+  },
   {
     src: `/images/code-quizSS.png`, //img path
     title: `Code Quiz`, //project title
@@ -93,9 +93,9 @@ const ProjectCarousel = () => {
       ))}
     </div>
     <div className="flex justify-center w-full py-2 gap-2">
-{projects.map((p, i) => (
+{projects.map((p, i) => ( //using second argument in map function to map carousel links
   <div className="tooltip" data-tip={p.title}>
-    <a href={`#${p.title}`} className="btn btn-xs">{i+1}</a>
+    <a href={`#${p.title}`} className="btn btn-primary btn-xs">{i+1}</a>
   </div>
 ))}
     </div></>
