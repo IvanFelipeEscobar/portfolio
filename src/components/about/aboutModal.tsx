@@ -4,7 +4,7 @@ const AboutModal = () => {
   return (
     <>
       <button
-        className="w-full btn btn-neutral text-xl md:w-fit"
+        className="w-full btn btn-neutral text-xl md:w-fit mb-12"
         onClick={() => {
           const modal = document.getElementById(
             "about-modal"

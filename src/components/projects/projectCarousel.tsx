@@ -95,7 +95,7 @@ const ProjectCarousel = () => {
     <div className="flex justify-center w-full py-2 gap-2">
 {projects.map((p, i) => ( //using second argument in map function to map carousel links
   <div className="tooltip" data-tip={p.title}>
-    <a href={`#${p.title}`} className="btn btn-primary btn-xs">{i+1}</a>
+    <a href={`#${p.title}`} className="btn btn-success btn-xs">{i+1}</a>
   </div>
 ))}
     </div></>

@@ -1,8 +1,10 @@
 // import ContactForm from "./contactForm"
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import ContactForm from "./contactForm";
+import { FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa6";
 const ContactCard = () => {
-  const timeRef = useRef<number|null>(null)
+  const timeRef = useRef<number | null>(null);
   const imgArray = [
     "/images/html.png",
     "/images/css.png",
@@ -18,7 +20,8 @@ const ContactCard = () => {
     "/images/framer.png",
   ];
   console.log(imgArray);
-  const shuffleArray = (array: string[]) => {//Fisher-Yates shuffle algorithm
+  const shuffleArray = (array: string[]) => {
+    //Fisher-Yates shuffle algorithm
     for (let i = array.length - 1; i > 0; i--) {
       const randomIndex = Math.floor(Math.random() * (i + 1));
       [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
@@ -27,45 +30,90 @@ const ContactCard = () => {
   };
 
   const generateGrid = () =>
-    shuffleArray(imgArray).map((imgUrl, i) => ( //generating an array of components that shffles order every time its called
-      <motion.div
-        key={i}
-        layout
-        transition={{ duration: 1.8, type: "spring" }}
-        className="h-28 w-28"
-        style={{
-          backgroundImage: `url(${imgUrl})`,
-          backgroundSize: "cover",
-        }}
-      ></motion.div>
-    ));
+    shuffleArray(imgArray).map(
+      (
+        imgUrl,
+        i //generating an array of components that shffles order every time its called
+      ) => (
+        <motion.div
+          key={i}
+          layout
+          transition={{ duration: 1.8, type: "spring" }}
+          className="h-28 w-28"
+          style={{
+            backgroundImage: `url(${imgUrl})`,
+            backgroundSize: "cover",
+          }}
+        ></motion.div>
+      )
+    );
 
-    const [grid, setGrid] = useState(generateGrid());
-   
+  const [grid, setGrid] = useState(generateGrid());
 
-    useEffect(()=> {
-        shuffleTech();
-        return ()=>clearTimeout(timeRef.current!)
-    }, [])
+  useEffect(() => {
+    shuffleTech();
+    return () => clearTimeout(timeRef.current!);
+  }, []);
 
-    const shuffleTech = () => {
-        setGrid(generateGrid())
-        timeRef.current = setTimeout(shuffleTech, 3000)    
-    }
+  const shuffleTech = () => {
+    setGrid(generateGrid());
+    timeRef.current = setTimeout(shuffleTech, 4000);
+  };
 
   return (
-    <div className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
-    <div className="grid grid-cols-3 grid-rows-4 gap-2">
-      {grid.map(x=>x)}
-    </div>
-      <div className="hero min-h-full mt-12">
+    <div className="w-full px-8 py-12 flex flex-col md:flex-row-reverse items-center max-w-6xl mx-auto">
+      <div className="hero min-h-full mx-12 md:mx-0 md:w-1/2">
         <div className="hero-content text-center">
-          <div className="max-w-md">
-            <h2 className="text-4xl font-bold text-base-100">Connect With Me</h2>
-            <p className="py-4 text-secondary">Got questions? Want to discuss a project? Don't be shy, Drop me a line!</p>
-            
+          <div className="">
+            <div className="flex justify-center gap-3 mb-2">
+              <a
+                href="https://github.com/IvanFelipeEscobar"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FaGithub
+                  size={48}
+                  color={"white"}
+                  className="hover:skew-y-12"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ivan-felipe-escobar/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FaLinkedin
+                  size={48}
+                  color={"white"}
+                  className="hover:skew-y-12"
+                />
+              </a>
+              <a
+                href="https://stackoverflow.com/users/20161905/ivan-escobar"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FaStackOverflow
+                  size={48}
+                  color={"white"}
+                  className="hover:skew-y-12"
+                />
+              </a>
+            </div>
+            <h2 className="text-4xl font-bold text-base-100">
+              Connect With Me
+            </h2>
+            <p className="py-4 text-secondary text-balance">
+              Got questions? Want to discuss a project? Don't be shy, Drop me a
+              line!
+            </p>
+            <ContactForm />
           </div>
         </div>
+      </div>
+
+      <div className="grid grid-cols-3 grid-rows-4 gap-2">
+        {grid.map((x) => x)}
       </div>
     </div>
   );
