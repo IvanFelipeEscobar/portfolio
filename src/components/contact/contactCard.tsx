@@ -61,7 +61,7 @@ const ContactCard = () => {
   };
 
   return (
-    <div className="w-full px-8 py-12 flex flex-col md:flex-row-reverse gap-12 md:gap-0 items-center max-w-6xl mx-auto">
+    <div className="w-full px-8 py-12 flex flex-col md:flex-row-reverse md:justify-evenly gap-12 md:gap-0 items-center max-w-6xl mx-auto">
       <div className="hero md:min-h-full mx-12 md:mx-0 md:w-1/2">
         <div className="hero-content text-center">
           <div className="">
