@@ -1,5 +1,5 @@
 import ContactCard from "./contactCard"
-import ContactParallax from "./ContactParallex"
+import ContactParallax from "./contactParallex"
 
 const Contact = () => {
   return (
