@@ -5,22 +5,24 @@ import ContactForm from "./contactForm";
 import { FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa6";
 const ContactCard = () => {
   const timeRef = useRef<number | null>(null);
+  interface Img {
+    url: string, id: number
+  }
   const imgArray = [
-    "/images/html.png",
-    "/images/css.png",
-    "/images/ts.png",
-    "/images/js.png",
-    "/images/node-js-icon-8.jpg",
-    "/images/react.png",
-    "/images/mongo.png",
-    "/images/nextjs-icon.png",
-    "/images/mysql.png",
-    "/images/tailwind-css-icon.png",
-    "images/bootstrap-5-logo-icon.png",
-    "/images/framer.png",
+    { url: "/images/html.png", id: 1 },
+    { url: "/images/ts.png", id: 2 },
+    { url: "/images/js.png", id: 3 },
+    { url: "/images/css.png", id: 4 },
+    { url: "/images/node-js-icon-8.jpg", id: 5 },
+    { url: "/images/react.png", id: 6 },
+    { url: "/images/mongo.png", id: 7 },
+    { url: "/images/nextjs-icon.png", id: 8 },
+    { url: "/images/mysql.png", id: 9 },
+    { url: "/images/tailwind-css-icon.png", id: 10 },
+    { url: "images/bootstrap-5-logo-icon.png", id: 11 },
+    { url: "/images/framer.png", id: 12 },
   ];
-  console.log(imgArray);
-  const shuffleArray = (array: string[]) => {
+  const shuffleArray = (array: Img[]) => {
     //Fisher-Yates shuffle algorithm
     for (let i = array.length - 1; i > 0; i--) {
       const randomIndex = Math.floor(Math.random() * (i + 1));
@@ -32,16 +34,15 @@ const ContactCard = () => {
   const generateGrid = () =>
     shuffleArray(imgArray).map(
       (
-        imgUrl,
-        i //generating an array of components that shffles order every time its called
+        imgUrl, //generating an array of components that shffles order every time its called
       ) => (
         <motion.div
-          key={i}
+          key={imgUrl.id}
           layout
-          transition={{ duration: 1.8, type: "spring" }}
+          transition={{ duration: 1.5, type: "spring" }}
           className="h-28 w-28"
           style={{
-            backgroundImage: `url(${imgUrl})`,
+            backgroundImage: `url(${imgUrl.url})`,
             backgroundSize: "cover",
           }}
         ></motion.div>
@@ -49,16 +50,15 @@ const ContactCard = () => {
     );
 
   const [grid, setGrid] = useState(generateGrid());
+  const shuffleTech = () => {
+    setGrid(generateGrid());
+    timeRef.current = setTimeout(shuffleTech, 3000);
+  };
 
   useEffect(() => {
     shuffleTech();
     return () => clearTimeout(timeRef.current!);
   }, []);
-
-  const shuffleTech = () => {
-    setGrid(generateGrid());
-    timeRef.current = setTimeout(shuffleTech, 4000);
-  };
 
   return (
     <div className="w-full px-8 py-12 flex flex-col md:flex-row-reverse md:justify-evenly gap-12 md:gap-0 items-center max-w-6xl mx-auto">
@@ -112,9 +112,7 @@ const ContactCard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 grid-rows-4 gap-2">
-        {grid.map((x) => x)}
-      </div>
+      <div className="grid grid-cols-3 grid-rows-4 gap-2">{grid}</div>
     </div>
   );
 };

@@ -79,7 +79,7 @@ const ProjectCarousel = () => {
   return (<>
     <div className="carousel w-full">
       {projects.map((p) => (
-          <div id={p.title} className="carousel-item  w-full">
+          <div id={p.title} key={p.title} className="carousel-item  w-full">
             <ProjectCard
               key={p.title}
               imageSrc={p.src}
@@ -94,8 +94,10 @@ const ProjectCarousel = () => {
     </div>
     <div className="flex justify-center w-full py-2 gap-2">
 {projects.map((p, i) => ( //using second argument in map function to map carousel links
-  <div className="tooltip" data-tip={p.title}>
+  <div key={p.title}>
+<div className="tooltip" data-tip={p.title}>
     <a href={`#${p.title}`} className="btn btn-success btn-xs">{i+1}</a>
+  </div>
   </div>
 ))}
     </div></>
