@@ -27,7 +27,7 @@ const ContactForm = () => {
               (actually, it's just me so be patient)
             </p>
             <form
-              action="https://formsubmit.co/ivnescbr1989@gmail.com"
+              action="https://formsubmit.co/a9093e4038d5fa31d57f271fe4852939"
               method="POST"
               className="w-2/3 md:w-full flex flex-col justify-center mx-auto"
             >
