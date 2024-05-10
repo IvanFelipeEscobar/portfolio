@@ -24,14 +24,25 @@ const projects = [
       "... under construction",
     ],
   },
-  // {
-  //   src: `/images/tomatoduck.png`,
-  //   title: `Tomato Duck`,
-  //   description: `React application featuring 3 timer intervals, and a section allowing the user to set tasks (based on pomodoro focus technique). Application features user authentication via json webtokens, a "duck" chat bot configured with open ai to help answer questions`,
-  //   link: `https://tomatoduck.herokuapp.com/`,
-  //   github: `https://github.com/indwomt/tomatoduck`,
-  //   badge: ["MongoDb", "Express", "React", "Node", "Bootstrap", "openAI"],
-  // },
+  {
+    src: `/images/tomatoduck.png`,
+    title: `Tomato Duck v2`,
+    description:
+      "Tomato Duck is an exciting project highlighting my full-stack proficiency. Utilizing TypeScript, Tailwind CSS, and Zustand, I crafted an intuitive frontend with seamless state management. Security was paramount, achieved through JWT integration, while Nodemailer facilitated smooth email verification. Additionally, the integration of a chatbot, powered by advanced AI models, elevated user interaction. Tomato Duck reflects my commitment to innovative solutions, prioritizing user experience ",
+    link: `https://tomato-duck-v2.vercel.app/`,
+    github: `https://github.com/IvanFelipeEscobar/portfolio`,
+    badge: [
+      "MongoDb",
+      "Express",
+      "React",
+      "Node",
+      "TailwindCSS",
+      "openAI",
+      "TypeScript",
+      "Zustand",
+      "NodeMailer",
+    ],
+  },
   {
     src: `/images/day-in-the-life.png`, //img path
     title: `Day in the Life`, //project title
@@ -76,9 +87,10 @@ const projects = [
 ];
 
 const ProjectCarousel = () => {
-  return (<>
-    <div className="carousel w-full">
-      {projects.map((p) => (
+  return (
+    <>
+      <div className="carousel w-full">
+        {projects.map((p) => (
           <div id={p.title} key={p.title} className="carousel-item  w-full">
             <ProjectCard
               key={p.title}
@@ -90,17 +102,25 @@ const ProjectCarousel = () => {
               badge={p.badge}
             />
           </div>
-      ))}
-    </div>
-    <div className="flex justify-center w-full py-2 gap-2">
-{projects.map((p, i) => ( //using second argument in map function to map carousel links
-  <div key={p.title}>
-<div className="tooltip" data-tip={p.title}>
-    <a href={`#${p.title}`} className="btn btn-success btn-xs">{i+1}</a>
-  </div>
-  </div>
-))}
-    </div></>
+        ))}
+      </div>
+      <div className="flex justify-center w-full py-2 gap-2">
+        {projects.map(
+          (
+            p,
+            i //using second argument in map function to map carousel links
+          ) => (
+            <div key={p.title}>
+              <div className="tooltip" data-tip={p.title}>
+                <a href={`#${p.title}`} className="btn btn-success btn-xs">
+                  {i + 1}
+                </a>
+              </div>
+            </div>
+          )
+        )}
+      </div>
+    </>
   );
 };
 
