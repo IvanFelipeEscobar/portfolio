@@ -3,33 +3,18 @@ import ProjectCard from "./projectCard";
 const projects = [
   {
     src: `/images/maxi-screenshot.png`, //img path
-    title: `Maximotor`, //project title
-    description: `Mern full stack application meant to act as public facing site of auto repair shop, featuring user authentication. Written in typescript, styled with Chakra UI`,
+    title: `Maximotor - Auto Repair Shop Site`, //project title
+    description: 'Maximotor is a MERN full-stack application designed as the public-facing site for an auto repair shop. It incorporates user authentication and is written in TypeScript, with styling provided by Chakra UI.',
     link: `https://maximotor.vercel.app/`, //deployed app link
     github: `https://github.com/IvanFelipeEscobar/maximotor`,
     badge: ["MongoDb", "Express", "React", "Node", "TypeScript", "ChakraUI"],
   },
   {
-    src: "/images/gemspark.png",
-    title: "Gem Spark Usa",
-    description: "Ecommerce site, built with next. still under construction",
-    link: `https://gemspark-usa.vercel.app/`,
-    github: `https://github.com/IvanFelipeEscobar/gem-spark`,
-    badge: [
-      "TypeScript",
-      "Next.JS",
-      "tailwind css",
-      "DaisyUI",
-      "Zustand",
-      "... under construction",
-    ],
-  },
-  {
     src: `/images/tomatoduck.png`,
-    title: `Tomato Duck v2`,
+    title: `Tomato Duck v2 - Pomodoro Timer with Chatbot`,
     description:
-      "Tomato Duck is an exciting project highlighting my full-stack proficiency. Utilizing TypeScript, Tailwind CSS, and Zustand, I crafted an intuitive frontend with seamless state management. Security was paramount, achieved through JWT integration, while Nodemailer facilitated smooth email verification. Additionally, the integration of a chatbot, powered by advanced AI models, elevated user interaction. Tomato Duck reflects my commitment to innovative solutions, prioritizing user experience ",
-    link: `https://tomato-duck-v2.vercel.app/`,
+      "Tomato Duck v2 is a Pomodoro timer application featuring a duck chatbot. It utilizes TypeScript, Tailwind CSS, and Zustand for state management. Security features include JWT integration and email verification via Nodemailer. The chatbot adds a unique interactive element, enhancing user productivity and engagement.",
+   link: `https://tomato-duck-v2.vercel.app/`,
     github: `https://github.com/IvanFelipeEscobar/portfolio`,
     badge: [
       "MongoDb",
@@ -44,9 +29,24 @@ const projects = [
     ],
   },
   {
+    src: "/images/gemspark.png",
+    title: "Gem Spark Usa - Ecommerce Platform",
+    description: "Gem Spark USA is an ongoing ecommerce site built with Next.js. It is currently under construction.",
+   link: `https://gemspark-usa.vercel.app/`,
+    github: `https://github.com/IvanFelipeEscobar/gem-spark`,
+    badge: [
+      "TypeScript",
+      "Next.JS",
+      "tailwind css",
+      "DaisyUI",
+      "Zustand",
+      "... under construction",
+    ],
+  },
+  {
     src: `/images/day-in-the-life.png`, //img path
-    title: `Day in the Life`, //project title
-    description: `Blog style application featuring server-side rendering with handlebars.js. User authentication is achieved using express session middleware and cookies. User data along with journal entries are stored in a MySql database using sequelize.`,
+    title: `Day in the Life - Blog`,
+    description: `Day in the Life is a blog-style application featuring server-side rendering with Handlebars.js. User authentication is achieved using Express session middleware and cookies. User data, along with journal entries, are stored in a MySQL database using Sequelize.`,
     link: `https://day-in-the-life.herokuapp.com/`, //deployed app link
     github: `https://github.com/IvanFelipeEscobar/Day-in-the-Life`,
     badge: ["MySQL", "Handlebars.JS", "Bootstrap", "Express"],
@@ -54,7 +54,7 @@ const projects = [
   {
     src: `/images/meme-lib.png`, //img path
     title: `Meme-Lib`, //project title
-    description: `Static web site allows user to fetch a desired number of memes from either the reddit API or the igmFlip APi. The user can also save selected Meme's in a library which is persisted through local storage`,
+    description: `Meme-Lib is a static website allowing users to fetch a desired number of memes from either the Reddit API or the imgFlip API. Users can also save selected memes in a library, persisted through local storage.`,
     link: `https://ivanfelipeescobar.github.io/MemeLib/`, //deployed app link
     github: `https://github.com/IvanFelipeEscobar/MemeLib`,
     badge: ["reddit API", "Foundation Framework", "HTML", "JavaScript"],
@@ -73,15 +73,6 @@ const projects = [
     description: `Simple static site is an example of basic DOM manipulation using javascript`,
     link: `https://ivanfelipeescobar.github.io/Code-Quiz/`, //deployed app link
     github: `https://github.com/IvanFelipeEscobar/Code-Quiz`,
-    badge: ["HTML", "CSS", "JavaScript"],
-  },
-
-  {
-    src: `/images/password.png`, //img path
-    title: `Password-Generator`, //project title
-    description: `Using javascript pop-up boxes, this applicationg gathers user password preferences and generates a random password based on selections`,
-    link: `https://ivanfelipeescobar.github.io/Password-Generator/`, //deployed app link
-    github: `https://github.com/IvanFelipeEscobar/Password-Generator`,
     badge: ["HTML", "CSS", "JavaScript"],
   },
 ];
