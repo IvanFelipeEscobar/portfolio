@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="text-center">Ivan Felipe Escobar, with &hearts; 2024</div>
       <div>
         <a
-          href="https://docs.google.com/document/d/17Aw-E1eh9iOF9uW4VQX1DSyYzwHuMcKe/edit?usp=sharing&ouid=106679092608625552104&rtpof=true&sd=true"
+          href="/resume.pdf"
           rel="noreferrer"
           target="_blank"
           className="btn btn-success btn-wide mt-1"

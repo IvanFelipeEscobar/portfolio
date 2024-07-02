@@ -20,7 +20,7 @@ const Menu = () => {
         </li>
         <li>
           <a
-            href="https://docs.google.com/document/d/17Aw-E1eh9iOF9uW4VQX1DSyYzwHuMcKe/edit?usp=sharing&ouid=106679092608625552104&rtpof=true&sd=true"
+            href="/resume.pdf"
             rel="noreferrer"
             target="_blank"
             className="btn btn-primary btn-sm mr-2"
@@ -55,7 +55,7 @@ const Menu = () => {
          
           <li>
             <a
-              href="https://docs.google.com/document/d/17Aw-E1eh9iOF9uW4VQX1DSyYzwHuMcKe/edit?usp=sharing&ouid=106679092608625552104&rtpof=true&sd=true"
+              href="/resume.pdf"
               rel="noreferrer"
               target="_blank"
               className="btn btn-primary btn-sm mr-2"
