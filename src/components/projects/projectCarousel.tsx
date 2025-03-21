@@ -4,52 +4,46 @@ const projects = [
   {
     src: `/images/maxi-screenshot.png`, //img path
     title: `Maximotor - Auto Repair Shop Site`, //project title
-    description: 'Maximotor is a MERN full-stack application designed as the public-facing site for an auto repair shop. It incorporates user authentication and is written in TypeScript, with styling provided by Chakra UI.',
+    description:
+      'Maximotor is a MERN full-stack application designed as the public-facing site for an auto repair shop. It incorporates user authentication and is written in TypeScript, with styling provided by Chakra UI.',
     link: `https://maximotor.vercel.app/`, //deployed app link
     github: `https://github.com/IvanFelipeEscobar/maximotor`,
-    badge: ["MongoDb", "Express", "React", "Node", "TypeScript", "ChakraUI"],
+    badge: ['MongoDb', 'Express', 'React', 'Node', 'TypeScript', 'ChakraUI'],
   },
   {
     src: `/images/tomatoduck.png`,
     title: `Tomato Duck v2 - Pomodoro Timer with Chatbot`,
     description:
-      "Tomato Duck v2 is a Pomodoro timer application featuring a duck chatbot. It utilizes TypeScript, Tailwind CSS, and Zustand for state management. Security features include JWT integration and email verification via Nodemailer. The chatbot adds a unique interactive element, enhancing user productivity and engagement.",
-   link: `https://tomato-duck-v2.vercel.app/`,
+      'Tomato Duck v2 is a Pomodoro timer application featuring a duck chatbot. It utilizes TypeScript, Tailwind CSS, and Zustand for state management. Security features include JWT integration and email verification via Nodemailer. The chatbot adds a unique interactive element, enhancing user productivity and engagement.',
+    link: `https://tomato-duck-v2.vercel.app/`,
     github: `https://github.com/IvanFelipeEscobar/portfolio`,
     badge: [
-      "MongoDb",
-      "Express",
-      "React",
-      "Node",
-      "TailwindCSS",
-      "openAI",
-      "TypeScript",
-      "Zustand",
-      "NodeMailer",
+      'MongoDb',
+      'Express',
+      'React',
+      'Node',
+      'TailwindCSS',
+      'openAI',
+      'TypeScript',
+      'Zustand',
+      'NodeMailer',
     ],
   },
   {
-    src: "/images/gemspark.png",
-    title: "Gem Spark Usa - Ecommerce Platform",
-    description: "Gem Spark USA is an ongoing ecommerce site built with Next.js. It is currently under construction.",
-   link: `https://gemspark-usa.vercel.app/`,
-    github: `https://github.com/IvanFelipeEscobar/gem-spark`,
+    src: '/images/next-store.png',
+    title: 'Next Store - Ecommerce Platform',
+    description: 'Next Store is a Next.js App written in typescript. Styled with Shadcn components and Tailwind css. User authentication with clerk and payment integration with stripe ',
+    link: `https://next-ecommerce-cyan.vercel.app/`,
+    github: `https://github.com/IvanFelipeEscobar/next-ecommerce`,
     badge: [
-      "TypeScript",
-      "Next.JS",
-      "tailwind css",
-      "DaisyUI",
-      "Zustand",
-      "... under construction",
+      'TypeScript',
+      'Next.JS',
+      'tailwind css',
+      'Shadcn',
+      'Supabase',
+      'Prisma',
+      'clerk'
     ],
-  },
-  {
-    src: `/images/day-in-the-life.png`, //img path
-    title: `Day in the Life - Blog`,
-    description: `Day in the Life is a blog-style application featuring server-side rendering with Handlebars.js. User authentication is achieved using Express session middleware and cookies. User data, along with journal entries, are stored in a MySQL database using Sequelize.`,
-    link: `https://day-in-the-life.herokuapp.com/`, //deployed app link
-    github: `https://github.com/IvanFelipeEscobar/Day-in-the-Life`,
-    badge: ["MySQL", "Handlebars.JS", "Bootstrap", "Express"],
   },
   {
     src: `/images/meme-lib.png`, //img path
@@ -57,7 +51,7 @@ const projects = [
     description: `Meme-Lib is a static website allowing users to fetch a desired number of memes from either the Reddit API or the imgFlip API. Users can also save selected memes in a library, persisted through local storage.`,
     link: `https://ivanfelipeescobar.github.io/MemeLib/`, //deployed app link
     github: `https://github.com/IvanFelipeEscobar/MemeLib`,
-    badge: ["reddit API", "Foundation Framework", "HTML", "JavaScript"],
+    badge: ['reddit API', 'Foundation Framework', 'HTML', 'JavaScript'],
   },
   {
     src: `/images/weather-dash.png`, //img path
@@ -65,7 +59,7 @@ const projects = [
     description: `Simple weather application styled using bootstrap. Weather information acquired via the open weather API`,
     link: `https://ivanfelipeescobar.github.io/Weather-Dashboard/`, //deployed app link
     github: `https://github.com/IvanFelipeEscobar/Weather-Dashboard`,
-    badge: ["Open Weather API", "Bootstrap", "HTML"],
+    badge: ['Open Weather API', 'Bootstrap', 'HTML'],
   },
   {
     src: `/images/code-quizSS.png`, //img path
@@ -73,9 +67,9 @@ const projects = [
     description: `Simple static site is an example of basic DOM manipulation using javascript`,
     link: `https://ivanfelipeescobar.github.io/Code-Quiz/`, //deployed app link
     github: `https://github.com/IvanFelipeEscobar/Code-Quiz`,
-    badge: ["HTML", "CSS", "JavaScript"],
+    badge: ['HTML', 'CSS', 'JavaScript'],
   },
-];
+]
 
 const ProjectCarousel = () => {
   return (
